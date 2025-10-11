@@ -200,31 +200,6 @@
   color: white;
 }
 
-/* === PARTNERSHIP === */
-.partnership {
-  text-align: center;
-  background-color: #f1f4f9;
-  margin-top: 7px;
-  padding: 30px 10px;
-}
-.partnership h1 {
-  font-size: 32px;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-  color: #222936;
-  font-family: 'Poppins', sans-serif;
-}
-
-.partner-logos {
-  padding: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-
-
 /* === FOOTER === */
 footer {
   text-align: center;
