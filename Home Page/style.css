@@ -1,0 +1,210 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* === NAVBAR === */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #003399;
+  padding: 15px 50px;
+  color: white;
+}
+
+/* LOGO */
+.logo h1 {
+  font-size: 22px;
+}
+
+.logo span {
+  color: #FFD700;
+}
+
+/* NOTIFIKASI */
+.notif-icon {
+  font-size: 22px;
+  margin-left: 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.notif-icon:hover {
+  transform: scale(1.2);
+}
+
+/* MENU */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-left: auto;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #FFD700;
+}
+
+/* lOGIN */
+.login-btn {
+  background-color: #FFD700;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #003399;
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  background-color: #002b80;
+  color: white;
+}
+
+/* === JUDUL === */
+.judul {
+  text-align: center;
+  margin: 40px 0 20px;
+}
+
+.judul h2 {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+/* === SLIDER SECTION === */
+.magang-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.magang-slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 20px;
+  padding: 10px;
+}
+
+.magang-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.magang-card {
+  position: relative;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  min-width: 280px;
+  max-width: 280px;
+  flex: none;
+  padding-bottom: 50px;
+  transition: transform 0.3s ease;
+}
+
+.magang-card:hover {
+  transform: translateY(-5px);
+}
+
+.magang-card img {
+  width: 100%;
+  height: 180px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  object-fit: cover;
+}
+
+.magang-card h3 {
+  font-size: 16px;
+  margin: 10px;
+}
+
+.magang-card p {
+  font-size: 13px;
+  color: #333;
+  margin: 0 10px 10px 10px;
+  text-align: justify;
+}
+
+
+.details-btn {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.details-btn:hover {
+  background-color: #003399;
+  color: white;
+}
+
+
+/* === ARROWS === */
+.prev, .next {
+  border: none;
+  background: white;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  width: 35px;
+  height: 35px;
+}
+
+/* === SEE ALL === */
+.see-all {
+  text-align: center;
+  margin: 30px 0 50px;
+}
+
+.see-all button {
+  background-color: #FFD700;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.see-all button:hover {
+  background-color: #003399;
+  color: white;
+}
+
+/* === FOOTER === */
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #003399;
+  color: white;
+  font-size: 14px;
+}

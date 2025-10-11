@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VINIX7</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+<nav class="navbar">
+  <div class="logo">
+    <h1>VINIX<span>7</span></h1>
+  </div>
+
+  <!-- Lonceng notifikasi -->
+  <div class="notif-icon">🔔</div>
+
+  <div class="nav-right">
+    <ul class="nav-links">
+      <li><a href="#">Magang Mandiri</a></li>
+      <li><a href="#">History Magang</a></li>
+      <li><a href="#">History Payment</a></li>
+      <li><a href="#">Sertifikat</a></li>
+      <li><a href="#">Profil</a></li>
+      <li><a href="#">About Us</a></li>
+    </ul>
+    <button class="login-btn">LOGIN</button>
+  </div>
+</nav>
+
+
+  <!-- ===== JUDUL ===== -->
+  <section class="judul">
+    <h2>PILIHAN MAGANG</h2>
+  </section>
+
+  <!-- ===== SLIDER MAGANG ===== -->
+  <section class="magang-container">
+    <button class="prev">&#10094;</button>
+    
+    <div class="magang-slider">
+      <!-- Card 1 -->
+      <div class="magang-card">
+        <img src="./img/data science.jpg" alt="Data Science">
+        <h3>Junior Data Scientist (Pengolahan Data)</h3>
+        <p>Junior Data Scientist adalah posisi pemula dalam bidang data science yang bertugas membantu menganalisis data dan membangun model sederhana untuk mendukung pengambilan keputusan bisnis.</p>
+        <button class="details-btn">Details</button>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="magang-card">
+        <img src="./img/data science.jpg" alt="Data Science">
+        <h3>Junior Data Analyst</h3>
+        <p>Junior Data Analyst bertanggung jawab untuk memproses, membersihkan, dan memvisualisasikan data agar dapat digunakan dalam pembuatan keputusan strategis.</p>
+        <button class="details-btn">Details</button>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="magang-card">
+        <img src="./img/se.jpg" alt="Software Engineer">
+        <h3>Junior Software Engineer</h3>
+        <p>Junior Software Engineer membantu dalam proses pengembangan aplikasi dengan menulis, menguji, dan memperbaiki kode sesuai kebutuhan proyek.</p>
+        <button class="details-btn">Details</button>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="magang-card">
+        <img src="./img/uiux.jpg" alt="UI/UX">
+        <h3>Junior UI/UX Designer</h3>
+        <p>Junior UI/UX Designer bertugas mendesain tampilan antarmuka aplikasi yang menarik dan mudah digunakan untuk meningkatkan pengalaman pengguna.</p>
+        <button class="details-btn">Details</button>
+      </div>
+    </div>
+
+    <button class="next">&#10095;</button>
+  </section>
+
+  <!-- ===== SEE ALL ===== -->
+  <div class="see-all">
+    <button>SEE ALL</button>
+  </div>
+
+  <footer>
+    <p>© 2025 VINIX7. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // ====== SCRIPT SLIDER SEDERHANA ======
+    const slider = document.querySelector('.magang-slider');
+    const next = document.querySelector('.next');
+    const prev = document.querySelector('.prev');
+
+    next.addEventListener('click', () => {
+      slider.scrollBy({ left: 300, behavior: 'smooth' });
+    });
+    prev.addEventListener('click', () => {
+      slider.scrollBy({ left: -300, behavior: 'smooth' });
+    });
+  </script>
+
+</body>
+</html>
