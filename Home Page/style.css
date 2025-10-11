@@ -233,3 +233,208 @@ footer {
   color: white;
   font-size: 14px;
 }
+
+/* ===== CONTACT US (center seimbang) ===== */
+.contact-section {
+  padding: 60px 20px;
+  background: #f3f5f9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-title {
+  text-align: center;
+  font-weight: 800;
+  font-size: 26px;
+  color: #003399;
+  letter-spacing: 0.5px;
+  margin-bottom: 30px;
+}
+
+/* Container grid dua kolom — seimbang & center */
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* kiri dan kanan sama lebar */
+  gap: 40px;
+  max-width: 1000px;  /* atur lebar maksimal supaya tidak terlalu lebar */
+  width: 100%;
+  justify-content: center;
+  align-items: stretch;
+}
+
+/* Box kiri */
+.contact-left {
+  background: #fff;
+  border-radius: 12px;
+  padding: 40px 28px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  text-align: center;              /* tetap center untuk logo dan posisi keseluruhan */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Paragraf di dalam box kiri — teksnya rata kanan kiri */
+.contact-left p {
+  text-align: justify !important;   /* pakai !important untuk menimpa center */
+  text-justify: inter-word;         /* biar spasi antar kata proporsional */
+  line-height: 1.7;
+  color: #1f2937;
+  font-size: 0.98rem;
+  max-width: 90%;
+  margin: 0 auto;                   /* biar tetap di tengah box */
+}
+
+
+.contact-logo {
+  height: 36px;
+  width: auto;
+  margin-bottom: 16px;
+}
+
+.contact-left p {
+  line-height: 1.8;
+  color: #1f2937;
+  font-size: 0.98rem;
+  text-align: center;
+  max-width: 90%;
+}
+
+/* Box kanan */
+.contact-right {
+  background: #0b4a9b;
+  color: #eaf2ff;
+  border-radius: 12px;
+  padding: 40px 28px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* === INFORMASI KONTAK (FIX IKON RAPI) === */
+.contact-info {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 10px 0;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;              /* vertikal center */
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.18);
+}
+
+.info-item:last-child {
+  border-bottom: none;
+}
+
+/* BULATAN IKON */
+.icon {
+  flex: 0 0 40px;       /* dari 36px → 40px supaya lingkaran ikut membesar */
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #0a3f86;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.1);
+}
+
+/* GAMBAR DI DALAM IKON */
+.icon img {
+  width: 22px;          /* dari 18px → 22px supaya lebih besar */
+  height: 22px;
+  object-fit: contain;
+  display: block;
+  filter: none;         /* biar warna ikon tetap asli */
+}
+
+/* TEKS INFO */
+.info-item div {
+  line-height: 1.6;
+  font-size: 0.95rem;
+  color: #eaf2ff;
+}
+
+/* ==== Sosial Media Pill (Presisi) ==== */
+.social-pill {
+  margin-top: 25px;
+  background: #e6eefc;
+  border-radius: 999px;
+  padding: 10px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;                 /* jarak antar ikon — ubah jadi 18px atau 22px jika mau lebih rapat/longgar */
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* bulatan ikon */
+.soc {
+  height: 48px;              /* sedikit lebih besar supaya lebih proporsional */
+  width: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #fff;
+  text-decoration: none;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+/* efek hover */
+.soc:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+/* ikon di dalamnya */
+.soc img {
+  width: 26px;     /* ukuran ikon agar seimbang */
+  height: 26px;
+  display: block;
+}
+
+
+/* Warna merek tiap ikon */
+.soc.tg { color: #0088cc; }  /* Telegram */
+.soc.ig { color: #e4405f; }  /* Instagram */
+.soc.tt { color: #010101; }  /* TikTok */
+.soc.gm { color: #d93025; }  /* Gmail */
+.soc.wa { color: #25d366; }  /* WhatsApp */
+
+/* Responsif */
+@media (max-width: 900px) {
+  .contact-container {
+    align-items: stretch;
+  }
+  .contact-right {
+    order: 2;
+  }
+  .contact-left {
+    order: 1;
+  }
+}
+
+.icon svg {
+  width: 18px;
+  height: 18px;
+  fill: #fff;
+}
+
+.soc img {
+  width: 22px;
+  height: 22px;
+}
