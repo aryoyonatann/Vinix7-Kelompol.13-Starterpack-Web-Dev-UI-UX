@@ -1,33 +1,35 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VINIX7</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<nav class="navbar">
-  <div class="logo">
-    <img src="./img/logo-vinix7.png" alt="VINIX7">
-  </div>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="./img/logo-vinix7.png" alt="VINIX7">
+    </div>
 
-  <div class="nav-right">
-    <ul class="nav-links">
-      <li><a href="#">Promo</a></li>
-      <li><a href="#">Magang</a></li>
-      <li><a href="#">Kerja Sama</a></li>
-      <li><a href="#">About Us</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="#">Promo</a></li>
+        <li><a href="#">Magang</a></li>
+        <li><a href="#">Kerja Sama</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
 
-    <i class="notif-icon">🔔</i>
-    <button class="login-btn">Login</button>
-  </div>
-</nav>
+      <i class="notif-icon">🔔</i>
+      <button class="login-btn">Login</button>
+    </div>
+  </nav>
 
- <!-- ===== HEADER / LOGO ===== -->
+  <!-- ===== HEADER / LOGO ===== -->
   <header class="header">
     <h1 class="logo">VINIX<span>7</span></h1>
   </header>
@@ -39,14 +41,18 @@
       <h2>VINIX7</h2>
       <h3>BATCH 3</h3>
       <p>
-        VINIX7 memiliki program magang seru, bekerjasama dengan berbagai perusahaan ternama. Kamu akan mendapatkan penempatan pasti di berbagai pilihan divisi, seperti TikTok agency, cyber security, digital forensic, data science, serta brand marketing & design. Kamu akan belajar langsung lewat proyek nyata dan dibimbing oleh mentor yang siap membantu perkembangan karirmu. Melalui program ini, kamu akan siap untuk menggapai karir yang kamu inginkan. Bergabung bersama kami!
+        VINIX7 memiliki program magang seru, bekerjasama dengan berbagai perusahaan ternama. Kamu akan mendapatkan
+        penempatan pasti di berbagai pilihan divisi, seperti TikTok agency, cyber security, digital forensic, data
+        science, serta brand marketing & design. Kamu akan belajar langsung lewat proyek nyata dan dibimbing oleh mentor
+        yang siap membantu perkembangan karirmu. Melalui program ini, kamu akan siap untuk menggapai karir yang kamu
+        inginkan. Bergabung bersama kami!
       </p>
     </div>
 
     <!-- Kanan: Gambar Promo -->
     <div class="image-section">
       <div class="promo-slider">
-        <img src="./img/Promo_Vinix.png"  alt="Promo 1" class="active">
+        <img src="./img/Promo_Vinix.png" alt="Promo 1" class="active">
         <img src="./img/Promo_Vinix_2.png" alt="Promo 2">
         <img src="./img/Promo_Vinix_3.png" alt="Promo 3">
       </div>
@@ -61,44 +67,44 @@
   </section>
 
   <script>
-    (function(){
-    const slider = document.querySelector('.promo-slider');
-    const images = [...slider.querySelectorAll('img')];
-    const dots   = [...document.querySelectorAll('.dot')];
+    (function () {
+      const slider = document.querySelector('.promo-slider');
+      const images = [...slider.querySelectorAll('img')];
+      const dots = [...document.querySelectorAll('.dot')];
 
-    let index = 0, autoTimer = null;
+      let index = 0, autoTimer = null;
 
-    function render(){
-      const prev = (index - 1 + images.length) % images.length;
-      const next = (index + 1) % images.length;
+      function render() {
+        const prev = (index - 1 + images.length) % images.length;
+        const next = (index + 1) % images.length;
 
-      images.forEach((img, i) => {
-        img.classList.remove('active','prev','next','rest');
-        if(i === index)      img.classList.add('active');
-        else if(i === prev)  img.classList.add('prev');
-        else if(i === next)  img.classList.add('next');
-        else                 img.classList.add('rest');
-      });
+        images.forEach((img, i) => {
+          img.classList.remove('active', 'prev', 'next', 'rest');
+          if (i === index) img.classList.add('active');
+          else if (i === prev) img.classList.add('prev');
+          else if (i === next) img.classList.add('next');
+          else img.classList.add('rest');
+        });
 
-      dots.forEach((d,i)=> d.classList.toggle('active', i===index));
-    }
+        dots.forEach((d, i) => d.classList.toggle('active', i === index));
+      }
 
-    function go(n){ index = (n + images.length) % images.length; render(); restartAuto(); }
-    function next(){ go(index + 1); }
+      function go(n) { index = (n + images.length) % images.length; render(); restartAuto(); }
+      function next() { go(index + 1); }
 
-    // klik dot
-    dots.forEach((d,i)=> d.addEventListener('click', ()=>go(i)));
+      // klik dot
+      dots.forEach((d, i) => d.addEventListener('click', () => go(i)));
 
-    // autoplay + pause saat hover
-    function startAuto(){ autoTimer = setInterval(next, 3000); }
-    function stopAuto(){ clearInterval(autoTimer); }
-    function restartAuto(){ stopAuto(); startAuto(); }
+      // autoplay + pause saat hover
+      function startAuto() { autoTimer = setInterval(next, 3000); }
+      function stopAuto() { clearInterval(autoTimer); }
+      function restartAuto() { stopAuto(); startAuto(); }
 
-    slider.addEventListener('mouseenter', stopAuto);
-    slider.addEventListener('mouseleave', startAuto);
+      slider.addEventListener('mouseenter', stopAuto);
+      slider.addEventListener('mouseleave', startAuto);
 
-    render(); startAuto();
-  })();
+      render(); startAuto();
+    })();
   </script>
 
 
@@ -110,13 +116,14 @@
   <!-- ===== SLIDER MAGANG ===== -->
   <section class="magang-container">
     <button class="prev">&#10094;</button>
-    
+
     <div class="magang-slider">
       <!-- Card 1 -->
       <div class="magang-card">
         <img src="./img/data science.jpg" alt="Data Science">
         <h3>Junior Data Scientist (Pengolahan Data)</h3>
-        <p>Junior Data Scientist adalah posisi pemula dalam bidang data science yang bertugas membantu menganalisis data dan membangun model sederhana untuk mendukung pengambilan keputusan bisnis.</p>
+        <p>Junior Data Scientist adalah posisi pemula dalam bidang data science yang bertugas membantu menganalisis data
+          dan membangun model sederhana untuk mendukung pengambilan keputusan bisnis.</p>
         <button class="details-btn">Details</button>
       </div>
 
@@ -124,7 +131,8 @@
       <div class="magang-card">
         <img src="./img/data science.jpg" alt="Data Science">
         <h3>Junior Data Analyst</h3>
-        <p>Junior Data Analyst bertanggung jawab untuk memproses, membersihkan, dan memvisualisasikan data agar dapat digunakan dalam pembuatan keputusan strategis.</p>
+        <p>Junior Data Analyst bertanggung jawab untuk memproses, membersihkan, dan memvisualisasikan data agar dapat
+          digunakan dalam pembuatan keputusan strategis.</p>
         <button class="details-btn">Details</button>
       </div>
 
@@ -132,7 +140,8 @@
       <div class="magang-card">
         <img src="./img/se.jpg" alt="Software Engineer">
         <h3>Junior Software Engineer</h3>
-        <p>Junior Software Engineer membantu dalam proses pengembangan aplikasi dengan menulis, menguji, dan memperbaiki kode sesuai kebutuhan proyek.</p>
+        <p>Junior Software Engineer membantu dalam proses pengembangan aplikasi dengan menulis, menguji, dan memperbaiki
+          kode sesuai kebutuhan proyek.</p>
         <button class="details-btn">Details</button>
       </div>
 
@@ -140,7 +149,8 @@
       <div class="magang-card">
         <img src="./img/uiux.jpg" alt="UI/UX">
         <h3>Junior UI/UX Designer</h3>
-        <p>Junior UI/UX Designer bertugas mendesain tampilan antarmuka aplikasi yang menarik dan mudah digunakan untuk meningkatkan pengalaman pengguna.</p>
+        <p>Junior UI/UX Designer bertugas mendesain tampilan antarmuka aplikasi yang menarik dan mudah digunakan untuk
+          meningkatkan pengalaman pengguna.</p>
         <button class="details-btn">Details</button>
       </div>
     </div>
@@ -153,8 +163,8 @@
     <button>SEE ALL</button>
   </div>
 
-<!-- ===== Kerja Sama Vinix7 ===== -->
-   <div class="partnership">
+  <!-- ===== Kerja Sama Vinix7 ===== -->
+  <div class="partnership">
     <h1>Mitra Kami</h1>
     <div class="logo-partner">
       <img src=".\img\kemendikbud.png" alt="Kemendikbud" width="200" height="auto">
@@ -168,7 +178,50 @@
       <img src=".\img\its.png" alt="ITS">
       <img src=".\img\untirta.png" alt="Untirta">
     </div>
-   </div>
+  </div>
+
+
+  <!-- Hero / Intro -->
+  <section class="hero">
+
+    <div class="hero-content">
+      <h1>About Us</h1>
+      <p>
+        Vinix7 adalah platform pengembangan karier yang berfokus pada peningkatan keterampilan mahasiswa,
+        fresh graduate, dan profesional muda melalui program magang, pelatihan, serta sertifikasi.
+        Kami hadir sebagai penghubung antara dunia pendidikan dan industri agar talenta muda lebih siap
+        bersaing dan berkontribusi nyata di dunia kerja.
+      </p>
+    </div>
+  </section>
+
+  <!-- Visi & Misi -->
+  <section class="visi-misi">
+    <h2>Visi & Misi</h2>
+    <div class="content">
+      <div class="visi">
+        <h3>Visi</h3>
+        <p>
+          Menjadi platform pengembangan karier terdepan yang membentuk generasi muda Indonesia agar siap
+          menghadapi tantangan global dengan kompetensi, inovasi, dan integritas.
+        </p>
+      </div>
+      <div class="misi">
+        <h3>Misi</h3>
+        <ol>
+          <li>Menyediakan program magang dan pelatihan yang relevan dengan kebutuhan industri.</li>
+          <li>Membantu mahasiswa dan fresh graduate membangun portofolio profesional.</li>
+          <li>Meningkatkan daya saing talenta muda melalui sertifikasi dan pengalaman praktis.</li>
+          <li>Menciptakan ekosistem kolaboratif antara dunia pendidikan, industri, dan masyarakat.</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+</body>
+
+</html>
+
 
 <!-- ===== CONTACT US ===== -->
 <section id="contact" class="contact-section">
@@ -195,7 +248,8 @@
           <span class="icon">
             <img src="./img/maps.svg" alt="Location">
           </span>
-          <div>Jl. Watugede No.58, Wonorejo, Sariharjo, Kec. Ngaglik, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55581</div>
+          <div>Jl. Watugede No.58, Wonorejo, Sariharjo, Kec. Ngaglik, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55581
+          </div>
         </li>
 
         <li class="info-item">
@@ -224,7 +278,8 @@
       <!-- Sosial media “pill” -->
       <div class="social-pill">
         <a href="#" class="soc tg"><img src="./img/telegram.svg" alt="Telegram"></a>
-        <a href="https://www.instagram.com/vinix7idn/" class="soc ig"><img src="./img/instagram.svg" alt="Instagram"></a>
+        <a href="https://www.instagram.com/vinix7idn/" class="soc ig"><img src="./img/instagram.svg"
+            alt="Instagram"></a>
         <a href="https://www.tiktok.com/@vinix7idn" class="soc tt"><img src="./img/tiktok.svg" alt="TikTok"></a>
         <a href="vinix7.idn@gmail.com" class="soc gm"><img src="./img/gmail.svg" alt="Gmail"></a>
         <a href="http://wa.me/087759779655" class="soc wa"><img src="./img/whatsapp.svg" alt="WhatsApp"></a>
@@ -233,12 +288,12 @@
   </div>
 </section>
 
-  <footer>
-    <p>© 2025 VINIX7. All rights reserved.</p>
-  </footer>
+<footer>
+  <p>© 2025 VINIX7. All rights reserved.</p>
+</footer>
 
-  <script>
-    const navbar = document.querySelector('.navbar');
+<script>
+  const navbar = document.querySelector('.navbar');
 
   window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
@@ -247,20 +302,21 @@
       navbar.classList.remove('scrolled');
     }
   });
-  
-    // ====== SCRIPT SLIDER SEDERHANA ======
-    const slider = document.querySelector('.magang-slider');
-    const next = document.querySelector('.next');
-    const prev = document.querySelector('.prev');
 
-    next.addEventListener('click', () => {
-      slider.scrollBy({ left: 300, behavior: 'smooth' });
-    });
-    prev.addEventListener('click', () => {
-      slider.scrollBy({ left: -300, behavior: 'smooth' });
-    });
-  </script>
+  // ====== SCRIPT SLIDER SEDERHANA ======
+  const slider = document.querySelector('.magang-slider');
+  const next = document.querySelector('.next');
+  const prev = document.querySelector('.prev');
+
+  next.addEventListener('click', () => {
+    slider.scrollBy({ left: 300, behavior: 'smooth' });
+  });
+  prev.addEventListener('click', () => {
+    slider.scrollBy({ left: -300, behavior: 'smooth' });
+  });
+</script>
 
 
 </body>
+
 </html>

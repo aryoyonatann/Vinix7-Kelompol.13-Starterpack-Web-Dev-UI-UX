@@ -23,7 +23,7 @@
 /* Saat discroll: jadi transparan + blur */
 .navbar.scrolled {
   background-color: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(6px);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
@@ -400,6 +400,85 @@ footer {
   background-color: #003399;
   color: white;
   font-size: 14px;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.hero h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-logo {
+  width: 250px;
+  height: auto;
+}
+
+/* Visi & Misi Section */
+.visi-misi {
+  text-align: center;
+  padding: 5px 20px;
+  background-color: #ffffff;
+}
+
+.visi-misi h2 {
+  font-size: 2em;
+  margin-bottom: 40px;
+}
+
+.visi-misi .content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 100px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.visi, .misi {
+  flex: 1;
+  min-width: 300px;
+  text-align: left;
+}
+
+.visi h3, .misi h3 {
+  font-size: 1.4em;
+  margin-bottom: 15px;
+  color: #003399;
+}
+
+.misi ol {
+  margin-left: 20px;
+  line-height: 1.8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-content {
+    text-align: justify;
+  }
+  .visi-misi .content {
+    flex-direction: column;
+    gap: 40px;
+  }
 }
 
 /* ===== CONTACT US (center seimbang) ===== */
