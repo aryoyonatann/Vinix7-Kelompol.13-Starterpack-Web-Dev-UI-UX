@@ -118,7 +118,7 @@
 .logo span { color:#FFD700; }
 
 /* === DASHBOARD === */
-.dashboard {
+#dashboard {
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -248,12 +248,12 @@
 }
 
 /* === JUDUL === */
-.judul {
+#judul {
   text-align: center;
   margin: 40px 0 20px;
 }
 
-.judul h2 {
+#judul h2 {
   font-size: 26px;
   font-weight: 700;
 }
@@ -403,18 +403,18 @@ footer {
 }
 
 /* Hero Section */
-.hero {
+#hero {
   text-align: center;
   padding: 60px 20px;
 }
 
-.hero h1 {
+#hero h1 {
   font-size: 2.5em;
   margin-bottom: 20px;
   font-weight: 700;
 }
 
-.hero-content {
+#hero-content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -423,7 +423,7 @@ footer {
   margin: 0 auto;
 }
 
-.hero-logo {
+#hero-logo {
   width: 250px;
   height: auto;
 }
