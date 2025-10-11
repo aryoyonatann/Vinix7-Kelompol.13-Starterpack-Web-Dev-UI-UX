@@ -8,27 +8,98 @@
 </head>
 <body>
 
-  <!-- ===== NAVBAR ===== -->
 <nav class="navbar">
   <div class="logo">
-    <h1>VINIX<span>7</span></h1>
+    <img src="./img/logo-vinix7.png" alt="VINIX7">
   </div>
-
-  <!-- Lonceng notifikasi -->
-  <div class="notif-icon">🔔</div>
 
   <div class="nav-right">
     <ul class="nav-links">
-      <li><a href="#">Magang Mandiri</a></li>
-      <li><a href="#">History Magang</a></li>
-      <li><a href="#">History Payment</a></li>
-      <li><a href="#">Sertifikat</a></li>
-      <li><a href="#">Profil</a></li>
+      <li><a href="#">Promo</a></li>
+      <li><a href="#">Magang</a></li>
+      <li><a href="#">Kerja Sama</a></li>
       <li><a href="#">About Us</a></li>
+      <li><a href="#">Contact</a></li>
     </ul>
-    <button class="login-btn">LOGIN</button>
+
+    <i class="notif-icon">🔔</i>
+    <button class="login-btn">Login</button>
   </div>
 </nav>
+
+ <!-- ===== HEADER / LOGO ===== -->
+  <header class="header">
+    <h1 class="logo">VINIX<span>7</span></h1>
+  </header>
+
+  <!-- ===== DASHBOARD SECTION ===== -->
+  <section class="dashboard">
+    <!-- Kiri: Deskripsi -->
+    <div class="text-section">
+      <h2>VINIX7</h2>
+      <h3>BATCH 3</h3>
+      <p>
+        VINIX7 memiliki program magang seru, bekerjasama dengan berbagai perusahaan ternama. Kamu akan mendapatkan penempatan pasti di berbagai pilihan divisi, seperti TikTok agency, cyber security, digital forensic, data science, serta brand marketing & design. Kamu akan belajar langsung lewat proyek nyata dan dibimbing oleh mentor yang siap membantu perkembangan karirmu. Melalui program ini, kamu akan siap untuk menggapai karir yang kamu inginkan. Bergabung bersama kami!
+      </p>
+    </div>
+
+    <!-- Kanan: Gambar Promo -->
+    <div class="image-section">
+      <div class="promo-slider">
+        <img src="./img/Promo_Vinix.png"  alt="Promo 1" class="active">
+        <img src="./img/Promo_Vinix_2.png" alt="Promo 2">
+        <img src="./img/Promo_Vinix_3.png" alt="Promo 3">
+      </div>
+
+      <!-- Indicator -->
+      <div class="dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    (function(){
+    const slider = document.querySelector('.promo-slider');
+    const images = [...slider.querySelectorAll('img')];
+    const dots   = [...document.querySelectorAll('.dot')];
+
+    let index = 0, autoTimer = null;
+
+    function render(){
+      const prev = (index - 1 + images.length) % images.length;
+      const next = (index + 1) % images.length;
+
+      images.forEach((img, i) => {
+        img.classList.remove('active','prev','next','rest');
+        if(i === index)      img.classList.add('active');
+        else if(i === prev)  img.classList.add('prev');
+        else if(i === next)  img.classList.add('next');
+        else                 img.classList.add('rest');
+      });
+
+      dots.forEach((d,i)=> d.classList.toggle('active', i===index));
+    }
+
+    function go(n){ index = (n + images.length) % images.length; render(); restartAuto(); }
+    function next(){ go(index + 1); }
+
+    // klik dot
+    dots.forEach((d,i)=> d.addEventListener('click', ()=>go(i)));
+
+    // autoplay + pause saat hover
+    function startAuto(){ autoTimer = setInterval(next, 3000); }
+    function stopAuto(){ clearInterval(autoTimer); }
+    function restartAuto(){ stopAuto(); startAuto(); }
+
+    slider.addEventListener('mouseenter', stopAuto);
+    slider.addEventListener('mouseleave', startAuto);
+
+    render(); startAuto();
+  })();
+  </script>
 
 
   <!-- ===== JUDUL ===== -->
@@ -167,6 +238,16 @@
   </footer>
 
   <script>
+    const navbar = document.querySelector('.navbar');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
+  
     // ====== SCRIPT SLIDER SEDERHANA ======
     const slider = document.querySelector('.magang-slider');
     const next = document.querySelector('.next');
