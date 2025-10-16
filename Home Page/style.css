@@ -5,6 +5,7 @@
   font-family: 'Poppins', sans-serif;
 }
 
+
 /* ===== NAVBAR ===== */
 .navbar {
   display: flex;
@@ -369,52 +370,19 @@
   color: white;
 }
 
-/* === PARTNERSHIP === */
-.partnership {
-  text-align: center;
-  background-color: #ffffff;
-  margin-top: 7px;
-  padding: 30px 10px;
-}
-.partnership h1 {
-  font-size: 32px;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-  color: #222936;
-  font-family: 'Poppins', sans-serif;
-}
-
-.partner-logos {
-  padding: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-
-/* === FOOTER === */
-footer {
-  text-align: center;
-  padding: 15px;
-  background-color: #003399;
-  color: white;
-  font-size: 14px;
-}
-
-/* Hero Section */
-#hero {
+/* aboutus Section */
+#aboutus {
   text-align: center;
   padding: 60px 20px;
 }
 
-#hero h1 {
+#aboutus h1 {
   font-size: 2.5em;
   margin-bottom: 20px;
   font-weight: 700;
 }
 
-#hero-content {
+#aboutus-content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -423,7 +391,7 @@ footer {
   margin: 0 auto;
 }
 
-#hero-logo {
+#aboutus-logo {
   width: 250px;
   height: auto;
 }
@@ -472,7 +440,7 @@ footer {
     flex-direction: column;
     text-align: center;
   }
-  .hero-content {
+  .aboutus-content {
     text-align: justify;
   }
   .visi-misi .content {
@@ -481,9 +449,84 @@ footer {
   }
 }
 
+/* === PARTNERSHIP === */
+.partnership {
+  text-align: center;
+  background-color: #ffffff;
+  margin-top: 7px;
+  padding: 30px 10px;
+}
+.partnership h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  color: #222936;
+  font-family: 'Poppins', sans-serif;
+}
+
+.partner-logos {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* ==== TESTIMONI ALUMNI ==== */
+#testi {
+  text-align: center;
+  padding: 30px 20px;
+  background: #ffffff;
+}
+#testi h1 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #000000;
+}
+.testimoni-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.testimoni-card {
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 280px;
+  transition: transform 0.3s ease;
+  margin-bottom: 30px;
+}
+.testimoni-card:hover {
+  transform: translateY(-5px);
+}
+.testimoni-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+.testimoni-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #000000;
+}
+.testimoni-card p {
+  font-size: 14px;
+  color: #555555;
+  line-height: 1.6;
+  text-align: justify;
+}
+
 /* ===== CONTACT US (center seimbang) ===== */
 .contact-section {
-  padding: 60px 20px;
+  padding: 40px 0px;
   background: #f3f5f9;
   display: flex;
   flex-direction: column;
@@ -534,7 +577,6 @@ footer {
   max-width: 90%;
   margin: 0 auto;                   /* biar tetap di tengah box */
 }
-
 
 .contact-logo {
   height: 36px;
@@ -684,4 +726,15 @@ footer {
 .soc img {
   width: 22px;
   height: 22px;
+}
+
+/* === FOOTER === */
+footer {
+  position: relative;
+  text-align: center;
+  padding: 15px;
+  margin: auto;
+  background-color: #003399;
+  color: white;
+  font-size: 14px;
 }

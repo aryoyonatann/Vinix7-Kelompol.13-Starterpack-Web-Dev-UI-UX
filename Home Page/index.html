@@ -19,8 +19,9 @@
       <ul class="nav-links">
         <li><a href="#dashboard">Promo</a></li>
         <li><a href="#judul">Magang</a></li>
+        <li><a href="#aboutus">About Us</a></li>
         <li><a href="#kerjasama">Kerja Sama</a></li>
-        <li><a href="#hero">About Us</a></li>
+        <li><a href="#testi">Testimoni</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
 
@@ -163,29 +164,9 @@
     <button>SEE ALL</button>
   </div>
 
-  <!-- ===== Kerja Sama Vinix7 ===== -->
-   <section id="kerjasama">
-  <div class="partnership">
-    <h1>Mitra Kami</h1>
-    <div class="logo-partner">
-      <img src=".\img\kemendikbud.png" alt="Kemendikbud" width="200" height="auto">
-      <img src=".\img\kementrian.png" alt="Kemenkoor" width="200" height="auto">
-      <img src=".\img\kampusMerdeka.png" alt="Kampus Merdeka" width="200" height="auto">
-      <img src=".\img\pegadaian.png" alt="Pegadaian" width="200" height="auto">
-      <img src=".\img\bankBPDDIY.png" alt="Bank BPD DIY" width="200" height="auto">
-      <img src=".\img\ilc.png" alt="ILC" width="200" height="auto">
-      <img src=".\img\diskominfo.png" alt="Diskominfo" width="200" height="auto">
-      <img src=".\img\itb.png" alt="ITB">
-      <img src=".\img\its.png" alt="ITS">
-      <img src=".\img\untirta.png" alt="Untirta">
-    </div>
-  </div>
-</section>
-
-  <!-- Hero / Intro -->
-  <section id="hero">
-
-    <div class="hero-content">
+  <!-- ABOUT US -->
+  <section id="aboutus">
+    <div class="aboutus-content">
       <h1>About Us</h1>
       <p>
         Vinix7 adalah platform pengembangan karier yang berfokus pada peningkatan keterampilan mahasiswa,
@@ -219,13 +200,54 @@
     </div>
   </section>
 
-</body>
+  <!-- ===== Kerja Sama Vinix7 ===== -->
+  <section id="kerjasama">
+  <div class="partnership">
+    <h1>Mitra Kami</h1>
+    <div class="logo-partner">
+      <img src=".\img\kemendikbud.png" alt="Kemendikbud" width="200" height="auto">
+      <img src=".\img\kementrian.png" alt="Kemenkoor" width="200" height="auto">
+      <img src=".\img\kampusMerdeka.png" alt="Kampus Merdeka" width="200" height="auto">
+      <img src=".\img\pegadaian.png" alt="Pegadaian" width="200" height="auto">
+      <img src=".\img\bankBPDDIY.png" alt="Bank BPD DIY" width="200" height="auto">
+      <img src=".\img\ilc.png" alt="ILC" width="200" height="auto">
+      <img src=".\img\diskominfo.png" alt="Diskominfo" width="200" height="auto">
+      <img src=".\img\itb.png" alt="ITB">
+      <img src=".\img\its.png" alt="ITS">
+      <img src=".\img\untirta.png" alt="Untirta">
+    </div>
+    </div>
+  </section>
 
-</html>
+  
 
+  <!-- ===== TESTIMONI ===== -->
+  <section id="testi">
+    <h1>TESTIMONI ALUMNI</h1>
+    <div class="testimoni-container">
+      <div class="testimoni-card">
+        <img src="./img/avaDefault.jpg" alt="Testimoni 1">
+        <h3>Rina Susanti</h3>
+        <p>"Magang di Vinix7 memberikan saya pengalaman berharga dan keterampilan praktis yang sangat membantu
+          dalam karir saya."</p>
+      </div>
+      <div class="testimoni-card">
+        <img src="./img/avaDefault.jpg" alt="Testimoni 2">
+        <h3>Andi Pratama</h3>
+        <p>"Program magang di Vinix7 sangat terstruktur dan mentor-mentornya sangat mendukung perkembangan
+          saya."</p>
+      </div>
+      <div class="testimoni-card">
+        <img src="./img/avaDefault.jpg" alt="Testimoni 3">
+        <h3>Siti Aisyah</h3>
+        <p>"Berkat Vinix7, saya mendapatkan kesempatan magang di perusahaan impian saya dan memperluas jaringan
+          profesional saya."</p>
+      </div>
+    </div>
+  </section>
 
-<!-- ===== CONTACT US ===== -->
-<section id="contact" class="contact-section">
+  <!-- ===== CONTACT US ===== -->
+  <section id="contact" class="contact-section">
   <h2 class="contact-title">CONTACT US</h2>
 
   <div class="contact-container">
@@ -286,38 +308,35 @@
         <a href="http://wa.me/087759779655" class="soc wa"><img src="./img/whatsapp.svg" alt="WhatsApp"></a>
       </div>
     </div>
-  </div>
-</section>
-
-<footer>
-  <p>© 2025 VINIX7. All rights reserved.</p>
-</footer>
-
-<script>
-  const navbar = document.querySelector('.navbar');
-
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-      navbar.classList.add('scrolled');
-    } else {
-      navbar.classList.remove('scrolled');
-    }
-  });
-
-  // ====== SCRIPT SLIDER SEDERHANA ======
-  const slider = document.querySelector('.magang-slider');
-  const next = document.querySelector('.next');
-  const prev = document.querySelector('.prev');
-
-  next.addEventListener('click', () => {
-    slider.scrollBy({ left: 300, behavior: 'smooth' });
-  });
-  prev.addEventListener('click', () => {
-    slider.scrollBy({ left: -300, behavior: 'smooth' });
-  });
-</script>
+    </div>
+  </section>
 
 
-</body>
+  <script>
+    const navbar = document.querySelector('.navbar');
 
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    // ====== SCRIPT SLIDER SEDERHANA ======
+    const slider = document.querySelector('.magang-slider');
+    const next = document.querySelector('.next');
+    const prev = document.querySelector('.prev');
+
+    next.addEventListener('click', () => {
+      slider.scrollBy({ left: 300, behavior: 'smooth' });
+    });
+    prev.addEventListener('click', () => {
+      slider.scrollBy({ left: -300, behavior: 'smooth' });
+    });
+  </script>
+  <footer>
+    <p>© 2025 VINIX7. All rights reserved.</p>
+  </footer>
+  </body>
 </html>
