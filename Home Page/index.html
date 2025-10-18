@@ -19,7 +19,7 @@
     <div class="nav-right">
       <ul class="nav-links">
         <li><a href="#dashboard">Promo</a></li>
-        <li><a href="#judul">Magang</a></li>
+        <li><a href="#magang">Magang</a></li>
         <li><a href="#aboutus">About Us</a></li>
         <li><a href="#kerjasama">Kerja Sama</a></li>
         <li><a href="#testi">Testimoni</a></li>
@@ -68,50 +68,8 @@
     </div>
   </section>
 
-  <script>
-    (function () {
-      const slider = document.querySelector('.promo-slider');
-      const images = [...slider.querySelectorAll('img')];
-      const dots = [...document.querySelectorAll('.dot')];
-
-      let index = 0, autoTimer = null;
-
-      function render() {
-        const prev = (index - 1 + images.length) % images.length;
-        const next = (index + 1) % images.length;
-
-        images.forEach((img, i) => {
-          img.classList.remove('active', 'prev', 'next', 'rest');
-          if (i === index) img.classList.add('active');
-          else if (i === prev) img.classList.add('prev');
-          else if (i === next) img.classList.add('next');
-          else img.classList.add('rest');
-        });
-
-        dots.forEach((d, i) => d.classList.toggle('active', i === index));
-      }
-
-      function go(n) { index = (n + images.length) % images.length; render(); restartAuto(); }
-      function next() { go(index + 1); }
-
-      // klik dot
-      dots.forEach((d, i) => d.addEventListener('click', () => go(i)));
-
-      // autoplay + pause saat hover
-      function startAuto() { autoTimer = setInterval(next, 3000); }
-      function stopAuto() { clearInterval(autoTimer); }
-      function restartAuto() { stopAuto(); startAuto(); }
-
-      slider.addEventListener('mouseenter', stopAuto);
-      slider.addEventListener('mouseleave', startAuto);
-
-      render(); startAuto();
-    })();
-  </script>
-
-
-  <!-- ===== JUDUL ===== -->
-  <section id="judul">
+  <!-- ===== MAGANG ===== -->
+  <section id="magang">
     <h2>PILIHAN MAGANG</h2>
   </section>
 
@@ -321,6 +279,45 @@
         navbar.classList.remove('scrolled');
       }
     });
+
+    (function () {
+      const slider = document.querySelector('.promo-slider');
+      const images = [...slider.querySelectorAll('img')];
+      const dots = [...document.querySelectorAll('.dot')];
+
+      let index = 0, autoTimer = null;
+
+      function render() {
+        const prev = (index - 1 + images.length) % images.length;
+        const next = (index + 1) % images.length;
+
+        images.forEach((img, i) => {
+          img.classList.remove('active', 'prev', 'next', 'rest');
+          if (i === index) img.classList.add('active');
+          else if (i === prev) img.classList.add('prev');
+          else if (i === next) img.classList.add('next');
+          else img.classList.add('rest');
+        });
+
+        dots.forEach((d, i) => d.classList.toggle('active', i === index));
+      }
+
+      function go(n) { index = (n + images.length) % images.length; render(); restartAuto(); }
+      function next() { go(index + 1); }
+
+      // klik dot
+      dots.forEach((d, i) => d.addEventListener('click', () => go(i)));
+
+      // autoplay + pause saat hover
+      function startAuto() { autoTimer = setInterval(next, 3000); }
+      function stopAuto() { clearInterval(autoTimer); }
+      function restartAuto() { stopAuto(); startAuto(); }
+
+      slider.addEventListener('mouseenter', stopAuto);
+      slider.addEventListener('mouseleave', startAuto);
+
+      render(); startAuto();
+    })();
 
     // ====== SCRIPT SLIDER SEDERHANA ======
     const slider = document.querySelector('.magang-slider');
